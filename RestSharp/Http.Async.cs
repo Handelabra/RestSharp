@@ -462,7 +462,7 @@ namespace RestSharp
                 webRequest.ClientCertificates.AddRange(this.ClientCertificates);
             }
 
-            webRequest.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip | DecompressionMethods.None;
+			webRequest.AutomaticDecompression = /*DecompressionMethods.Deflate | DecompressionMethods.GZip |*/ DecompressionMethods.None;
 
             webRequest.ServicePoint.Expect100Continue = false;
 
