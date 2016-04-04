@@ -272,15 +272,15 @@ namespace RestSharp
             return null;
         }
 
-#if SILVERLIGHT
+//#if SILVERLIGHT
         private readonly Regex structuredSyntaxSuffixRegex = new Regex(@"\+\w+$");
 
         private readonly Regex structuredSyntaxSuffixWildcardRegex = new Regex(@"^\*\+\w+$");
-#else
+/*#else
         private readonly Regex structuredSyntaxSuffixRegex = new Regex(@"\+\w+$", RegexOptions.Compiled);
 
         private readonly Regex structuredSyntaxSuffixWildcardRegex = new Regex(@"^\*\+\w+$", RegexOptions.Compiled);
-#endif
+#endif*/
 
         private void AuthenticateIfNeeded(RestClient client, IRestRequest request)
         {
