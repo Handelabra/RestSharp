@@ -166,6 +166,11 @@ namespace RestSharp
             return this.AddFile(FileParameter.Create(name, bytes, fileName, contentType));
         }
 
+		public IRestRequest AddFile (string name, byte[] bytes, string fileName)
+		{
+			return this.AddFile (name, bytes, fileName, null);
+		}
+
         /// <summary>
         /// Adds the bytes to the Files collection with the specified file name and content type
         /// </summary>

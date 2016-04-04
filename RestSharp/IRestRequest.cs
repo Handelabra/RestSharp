@@ -163,6 +163,8 @@ namespace RestSharp
         /// <returns>This request</returns>
         IRestRequest AddFile(string name, Action<Stream> writer, string fileName, long contentLength, string contentType = null);
 
+		IRestRequest AddFile (string name, byte[] bytes, string fileName);
+
         /// <summary>
         /// Add bytes to the Files collection as if it was a file of specific type
         /// </summary>
